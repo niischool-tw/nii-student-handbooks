@@ -237,6 +237,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .hlt{background:var(--p50);color:var(--p600);padding:1px 6px;border-radius:4px;font-weight:700;border:1px solid var(--p100)}
 .note{background:var(--a50);border-radius:10px;padding:8px 14px;font-size:16px;color:var(--a500);border:1px solid var(--a100);margin-top:10px}
 .note-r{background:#FEF5F5;border-color:#F5C5C5;color:#C53030}
+.callout{padding:4px 4px 8px;margin-top:2px;font-size:16px;color:var(--text-muted)}
+.callout-row{display:flex;gap:10px;align-items:flex-start}
+.callout-row + .callout-row{margin-top:8px}
+.callout-row::before{content:"•";color:#111;font-weight:700;line-height:1.5;flex:0 0 auto}
 .divider{width:100%;height:1px;background:var(--border);margin:10px 0}
 .cal-cell{background:#fff;padding:3px 5px;overflow:hidden}
 .cal-date{font-size:12px;font-weight:700;color:#1a2b3c;line-height:1.4;margin-bottom:1px}
@@ -1018,17 +1022,22 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 <div class="si">
   <div class="lbl">重要規定</div>
   <div class="h2">💰 退費標準說明</div>
-  <div style="margin-top:6px;font-size:16px;color:var(--text-muted)">第一週：6/22 文法課 · 6/25–28 口說課｜以 12 週課程方案計算</div>
+  <div style="margin-top:6px;font-size:16px;color:var(--text-muted)">退費以「週次」計算｜起步班 12 週、三學期方案（起步＋起跑＋起飛）36 週，依實際上課週次認定退費級距</div>
+  <div class="callout">
+    <div class="callout-row"><span>海外學員如以國際匯款方式退款，將扣除實際匯款手續費後退回。</span></div>
+    <div class="callout-row"><span>退款審核通過後，你的名額即會釋出。</span></div>
+    <div class="callout-row"><span>退費作業約需 40～90 個工作天（不含例假日與國定假日），敬請耐心等候。</span></div>
+  </div>
   <div class="refund-row">
     <div class="rb rb-g">
       <div class="rb-tag">全額退費</div>
-      <div class="rb-period">7/1 之前申請</div>
+      <div class="rb-period">6/30 23:59 前申請</div>
       <div class="rb-amount">100%</div>
       <div class="rb-note">課程內容與需求不符<br>可申請全額退費</div>
     </div>
     <div class="rb rb-y">
       <div class="rb-tag">部分退費</div>
-      <div class="rb-period">7/1 後、未超過 1/2 進度</div>
+      <div class="rb-period">7/1 後、未達課程 1/2 進度</div>
       <div class="rb-amount">1/3</div>
       <div class="rb-note">退回 1/3 課程費用</div>
     </div>
@@ -1036,10 +1045,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
       <div class="rb-tag">不受理</div>
       <div class="rb-period">超過課程 1/2 後</div>
       <div class="rb-amount">0%</div>
-      <div class="rb-note">恕不接受退費申請<br>（W7 後即不受理）</div>
+      <div class="rb-note">恕不接受退費申請</div>
     </div>
   </div>
-  <div class="note">📌 海外學員如需匯款退款，將扣除匯款手續費後再行退回，敬請見諒。</div>
 </div></div></section>
 
 <!-- 23 ▪ 證書 -->
