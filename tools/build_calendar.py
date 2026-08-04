@@ -58,7 +58,8 @@ CLASSES = {
     # 起步班 S9 — W1–W12，文法課週一，開學前有開課說明直播
     'walking': dict(
         grammar=MON, week0=0,
-        pre={dt.date(2026, 9, 7): (True, '⭐ 20:00 開課說明直播')},
+        pre={dt.date(2026, 8, 31): (True, '📢 公告口說時段'),
+             dt.date(2026, 9, 7): (True, '⭐ 20:00 開課說明直播')},
         speak={THU: [EVE],
                FRI: [AM, NOON, PM, EVE],
                SAT: [AM, NOON, EVE],
@@ -90,13 +91,40 @@ CARD = ('background:var(--n100);border-radius:8px;padding:8px 10px;'
 
 
 def months_in_range():
-    """學期（含開學前日程）橫跨的 (年, 月) 清單。"""
-    earliest = min([START] + [d for c in CLASSES.values() for d in c['pre']])
-    out, y, m = [], earliest.year, earliest.month
+    """學期橫跨的 (年, 月) 清單＝月曆頁數。
+
+    開學前日程不影響頁數：它們多半落在第一頁的前置鄰月格裡（例如 8/31
+    會出現在九月頁的第一格），不需要為此多開一頁。真的落在所有格子之外
+    時，由 check_pre_visible() 擋下來。
+    """
+    out, y, m = [], START.year, START.month
     while (y, m) <= (END.year, END.month):
         out.append((y, m))
         y, m = (y + 1, 1) if m == 12 else (y, m + 1)
     return out
+
+
+def grid_span():
+    """所有月曆頁實際涵蓋的日期範圍（含前後鄰月格）。"""
+    y, m = MONTHS[0]
+    first = dt.date(y, m, 1)
+    start = first - dt.timedelta(first.weekday())
+    y2, m2 = MONTHS[-1]
+    last_first = dt.date(y2, m2, 1)
+    lead = last_first.weekday()
+    rows = -(-(lead + calendar.monthrange(y2, m2)[1]) // 7)
+    end = last_first - dt.timedelta(lead) + dt.timedelta(rows * 7 - 1)
+    return start, end
+
+
+def check_pre_visible():
+    """開學前日程若落在所有月曆格之外，它就不會顯示在任何一頁。"""
+    lo, hi = grid_span()
+    for name, cfg in CLASSES.items():
+        for d in cfg['pre']:
+            if not (lo <= d <= hi):
+                sys.exit(f'{name}: 開學前日程 {d} 不在月曆涵蓋範圍 {lo}–{hi} 內，'
+                         f'不會顯示在任何一頁。請調整日期或增加行事曆頁數。')
 
 
 MONTHS = months_in_range()
@@ -147,7 +175,9 @@ def cell(d, cfg, out=False):
             hi, txt = cfg['pre'][d]
             if hi and not out:
                 style = ' style="background:var(--p50)"'
-            evts.append(f'<div class="cal-evt cal-evt-hi">{txt}</div>')
+            # cal-keep 讓開學前日程即使落在鄰月格也維持正常可讀度：
+            # 這是要學生留意的公告，不是順帶顯示的鄰月日期。
+            evts.append(f'<div class="cal-evt cal-evt-hi cal-keep">{txt}</div>')
         if wk and d.weekday() == cfg['grammar']:
             evts.append(f'<div class="cal-evt cal-evt-hi">{GRAMMAR_TXT}</div>')
         if wk:
@@ -312,6 +342,7 @@ def verify(name):
 
 
 def main():
+    check_pre_visible()
     weeks = sum(1 for _ in iter_weeks())
     print(f'學期 {START} – {END}｜停課 {len(BREAKS)} 段｜上課 {weeks} 週｜'
           f'月曆 {len(MONTHS)} 頁\n')
