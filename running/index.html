@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>學生手冊 2026.06 — 全方位日文起跑班 | 泥日教育</title>
+<title>學生手冊 2026.09 — 全方位日文起跑班 | 泥日教育</title>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <style>
 /* ── nii-cis Design Tokens ── */
@@ -243,6 +243,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 .cal-wk{font-size:10px;font-weight:600;color:#7a8a9a}
 .cal-evt{font-size:10px;font-weight:500;color:#374151;line-height:1.3;margin-top:1px}
 .cal-evt-hi{color:var(--p600);font-weight:700}
+.cal-out{background:var(--n100)}
+.cal-out .cal-date,.cal-out .cal-evt{opacity:.42}
 .cal-last{font-size:9px;color:var(--text-muted);font-weight:400}
 @keyframes bloom-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .spin-slow{display:inline-block;animation:bloom-spin 6s linear infinite}
@@ -255,7 +257,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   <a href="index.html" class="nav-brand">
     <img src="assets/logo-color.png" alt="泥日教育 Nii School" style="height:32px;width:auto;display:block">
   </a>
-  <span class="nav-title">全方位日文起跑班 — 學生手冊 2026.06</span>
+  <span class="nav-title">全方位日文起跑班 — 學生手冊 2026.09</span>
   <div class="nav-right">
     <button class="nav-search-btn" onclick="openSearch()" title="快速搜尋 (Ctrl+K)">
       <span>🔍</span> 快速查找
@@ -278,7 +280,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     <div style="font-size:14px;color:var(--text-muted)">nii.school</div>
   </div>
   <div style="margin:auto 0;position:relative;z-index:1">
-    <div class="cover-badge">2026.06 版</div>
+    <div class="cover-badge">2026.09 版</div>
     <div class="cover-title">學生手冊</div>
     <div class="cover-title-grad">全方位日文起跑班</div>
     <div class="cover-sub">開課前必讀，請仔細閱讀以下說明</div>
@@ -485,17 +487,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     <div class="col">
       <h3>🗓️ 重要日程</h3>
       <ul class="rlist tight">
-        <li style="background:var(--a50);border-color:var(--a100);border-left-color:var(--a500)"><span class="ri">🎉</span><div><strong style="color:var(--a500)">6/22（日）學期正式開始</strong></div></li>
-        <li><span class="ri">📘</span><div><strong>6/23（二）20:00–21:30</strong><br>W13 文法課</div></li>
-        <li><span class="ri">🗣️</span><div><strong>6/25–28</strong> 各班第一次口說課</div></li>
+        <li style="background:var(--a50);border-color:var(--a100);border-left-color:var(--a500)"><span class="ri">🎉</span><div><strong style="color:var(--a500)">9/14（一）學期正式開始</strong></div></li>
+        <li><span class="ri">📘</span><div><strong>9/15（二）20:00–21:30</strong><br>W13 文法課</div></li>
+        <li><span class="ri">🗣️</span><div><strong>9/17–20</strong> 各班第一次口說課</div></li>
       </ul>
     </div>
     <div class="col">
       <h3>📆 口說課時段</h3>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;flex:1">
         <div style="background:var(--n100);border-radius:8px;padding:8px 10px;border-left:3px solid var(--p300)"><strong style="color:var(--text);font-size:15px">週四</strong><div style="font-size:14px;color:var(--text-muted);margin-top:3px;line-height:1.6">晚間班 19:00–21:00</div></div>
-        <div style="background:var(--n100);border-radius:8px;padding:8px 10px;border-left:3px solid var(--p300)"><strong style="color:var(--text);font-size:15px">週五</strong><div style="font-size:14px;color:var(--text-muted);margin-top:3px;line-height:1.6">午前班 09:00–11:00<br>午後班 15:00–17:00<br>晚間班 19:00–21:00</div></div>
-        <div style="background:var(--n100);border-radius:8px;padding:8px 10px;border-left:3px solid var(--p300)"><strong style="color:var(--text);font-size:15px">週六</strong><div style="font-size:14px;color:var(--text-muted);margin-top:3px;line-height:1.6">午前班 09:00–11:00<br>正午班 12:00–14:00</div></div>
+        <div style="background:var(--n100);border-radius:8px;padding:8px 10px;border-left:3px solid var(--p300)"><strong style="color:var(--text);font-size:15px">週五</strong><div style="font-size:14px;color:var(--text-muted);margin-top:3px;line-height:1.6">午前班 09:00–11:00<br>正午班 12:00–14:00<br>晚間班 19:00–21:00</div></div>
+        <div style="background:var(--n100);border-radius:8px;padding:8px 10px;border-left:3px solid var(--p300)"><strong style="color:var(--text);font-size:15px">週六</strong><div style="font-size:14px;color:var(--text-muted);margin-top:3px;line-height:1.6">正午班 12:00–14:00<br>晚間班 19:00–21:00</div></div>
         <div style="background:var(--n100);border-radius:8px;padding:8px 10px;border-left:3px solid var(--p300)"><strong style="color:var(--text);font-size:15px">週日</strong><div style="font-size:14px;color:var(--text-muted);margin-top:3px;line-height:1.6">午前班 09:00–11:00<br>午後班 15:00–17:00<br>晚間班 19:00–21:00</div></div>
       </div>
       <div class="note" style="margin-top:8px">⏰ 口說課前一天晚間12點前完成作業提交</div>
@@ -503,175 +505,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
   </div>
 </div></div></section>
 
-<!-- 10 ▪ 六月行事曆 -->
-<section class="slide" data-title="六月行事曆" data-tag="課程架構" data-icon="📆">
-<div class="card th-white">
-<div class="si" style="padding:8px 22px calc(var(--ctrl-h) + 4px)">
-  <div style="flex-shrink:0;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
-    <div style="font-size:clamp(20px,3vw,32px);font-weight:800;color:var(--n800)">六月</div>
-    <div style="font-size:clamp(18px,2.6vw,28px);font-weight:800;color:var(--p500)">2026</div>
-  </div>
-  <div style="flex:1;min-height:0;overflow:hidden;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:auto repeat(5,1fr);gap:1px;background:var(--border);padding:1px;border-radius:4px">
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">一</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">二</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">三</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">四</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">五</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">六</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">日</div>
-    <div class="cal-cell"><div class="cal-date">1</div></div>
-    <div class="cal-cell"><div class="cal-date">2</div></div>
-    <div class="cal-cell"><div class="cal-date">3</div></div>
-    <div class="cal-cell"><div class="cal-date">4</div></div>
-    <div class="cal-cell"><div class="cal-date">5</div></div>
-    <div class="cal-cell"><div class="cal-date">6</div></div>
-    <div class="cal-cell"><div class="cal-date">7</div></div>
-    <div class="cal-cell"><div class="cal-date">8</div></div>
-    <div class="cal-cell"><div class="cal-date">9</div></div>
-    <div class="cal-cell"><div class="cal-date">10</div></div>
-    <div class="cal-cell"><div class="cal-date">11</div></div>
-    <div class="cal-cell"><div class="cal-date">12</div></div>
-    <div class="cal-cell"><div class="cal-date">13</div></div>
-    <div class="cal-cell"><div class="cal-date">14</div></div>
-    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">15</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
-    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">16</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
-    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">17</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
-    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">18</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
-    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">19</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
-    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">20</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
-    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">21</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
-    <div class="cal-cell" style="background:var(--a50);border-left:3px solid var(--a500);padding-left:4px"><div class="cal-date" style="color:var(--a500)">22<span class="cal-wk">｜W13</span></div><div class="cal-evt" style="color:var(--a500);font-weight:700">🎉 學期開始</div></div>
-    <div class="cal-cell"><div class="cal-date">23<span class="cal-wk">｜W13</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">24<span class="cal-wk">｜W13</span></div></div>
-    <div class="cal-cell"><div class="cal-date">25<span class="cal-wk">｜W13</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">26<span class="cal-wk">｜W13</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">27<span class="cal-wk">｜W13</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">28<span class="cal-wk">｜W13</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">29<span class="cal-wk">｜W14</span></div></div>
-    <div class="cal-cell"><div class="cal-date">30<span class="cal-wk">｜W14</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-  </div>
-</div></div></section>
-
-
-<!-- 11 ▪ 七月行事曆 -->
-<section class="slide" data-title="七月行事曆" data-tag="課程架構" data-icon="📆">
-<div class="card th-white">
-<div class="si" style="padding:8px 22px calc(var(--ctrl-h) + 4px)">
-  <div style="flex-shrink:0;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
-    <div style="font-size:clamp(20px,3vw,32px);font-weight:800;color:var(--n800)">七月</div>
-    <div style="font-size:clamp(18px,2.6vw,28px);font-weight:800;color:var(--p500)">2026</div>
-  </div>
-  <div style="flex:1;min-height:0;overflow:hidden;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:auto repeat(5,1fr);gap:1px;background:var(--border);padding:1px;border-radius:4px">
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">一</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">二</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">三</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">四</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">五</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">六</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">日</div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell"><div class="cal-date">1<span class="cal-wk">｜W14</span></div></div>
-    <div class="cal-cell"><div class="cal-date">2<span class="cal-wk">｜W14</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">3<span class="cal-wk">｜W14</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">4<span class="cal-wk">｜W14</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">5<span class="cal-wk">｜W14</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">6<span class="cal-wk">｜W15</span></div></div>
-    <div class="cal-cell"><div class="cal-date">7<span class="cal-wk">｜W15</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">8<span class="cal-wk">｜W15</span></div></div>
-    <div class="cal-cell"><div class="cal-date">9<span class="cal-wk">｜W15</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">10<span class="cal-wk">｜W15</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">11<span class="cal-wk">｜W15</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">12<span class="cal-wk">｜W15</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">13<span class="cal-wk">｜W16</span></div></div>
-    <div class="cal-cell"><div class="cal-date">14<span class="cal-wk">｜W16</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">15<span class="cal-wk">｜W16</span></div></div>
-    <div class="cal-cell"><div class="cal-date">16<span class="cal-wk">｜W16</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">17<span class="cal-wk">｜W16</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">18<span class="cal-wk">｜W16</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">19<span class="cal-wk">｜W16</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">20<span class="cal-wk">｜W17</span></div></div>
-    <div class="cal-cell"><div class="cal-date">21<span class="cal-wk">｜W17</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">22<span class="cal-wk">｜W17</span></div></div>
-    <div class="cal-cell"><div class="cal-date">23<span class="cal-wk">｜W17</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">24<span class="cal-wk">｜W17</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">25<span class="cal-wk">｜W17</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">26<span class="cal-wk">｜W17</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">27<span class="cal-wk">｜W18</span></div></div>
-    <div class="cal-cell"><div class="cal-date">28<span class="cal-wk">｜W18</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">29<span class="cal-wk">｜W18</span></div></div>
-    <div class="cal-cell"><div class="cal-date">30<span class="cal-wk">｜W18</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">31<span class="cal-wk">｜W18</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-  </div>
-</div></div></section>
-<!-- 12 ▪ 八月行事曆 -->
-<section class="slide" data-title="八月行事曆" data-tag="課程架構" data-icon="📆">
-<div class="card th-white">
-<div class="si" style="padding:8px 22px calc(var(--ctrl-h) + 4px)">
-  <div style="flex-shrink:0;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
-    <div style="font-size:clamp(20px,3vw,32px);font-weight:800;color:var(--n800)">八月</div>
-    <div style="font-size:clamp(18px,2.6vw,28px);font-weight:800;color:var(--p500)">2026</div>
-  </div>
-  <div style="flex:1;min-height:0;overflow:hidden;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:auto repeat(6,1fr);gap:1px;background:var(--border);padding:1px;border-radius:4px">
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">一</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">二</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">三</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">四</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">五</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">六</div>
-    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">日</div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell"><div class="cal-date">1<span class="cal-wk">｜W18</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">2<span class="cal-wk">｜W18</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">3<span class="cal-wk">｜W19</span></div></div>
-    <div class="cal-cell"><div class="cal-date">4<span class="cal-wk">｜W19</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">5<span class="cal-wk">｜W19</span></div></div>
-    <div class="cal-cell"><div class="cal-date">6<span class="cal-wk">｜W19</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">7<span class="cal-wk">｜W19</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">8<span class="cal-wk">｜W19</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">9<span class="cal-wk">｜W19</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">10<span class="cal-wk">｜W20</span></div></div>
-    <div class="cal-cell"><div class="cal-date">11<span class="cal-wk">｜W20</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">12<span class="cal-wk">｜W20</span></div></div>
-    <div class="cal-cell"><div class="cal-date">13<span class="cal-wk">｜W20</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">14<span class="cal-wk">｜W20</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">15<span class="cal-wk">｜W20</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">16<span class="cal-wk">｜W20</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">17<span class="cal-wk">｜W21</span></div></div>
-    <div class="cal-cell"><div class="cal-date">18<span class="cal-wk">｜W21</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">19<span class="cal-wk">｜W21</span></div></div>
-    <div class="cal-cell"><div class="cal-date">20<span class="cal-wk">｜W21</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">21<span class="cal-wk">｜W21</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">22<span class="cal-wk">｜W21</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">23<span class="cal-wk">｜W21</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">24<span class="cal-wk">｜W22</span></div></div>
-    <div class="cal-cell"><div class="cal-date">25<span class="cal-wk">｜W22</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">26<span class="cal-wk">｜W22</span></div></div>
-    <div class="cal-cell"><div class="cal-date">27<span class="cal-wk">｜W22</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">28<span class="cal-wk">｜W22</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">29<span class="cal-wk">｜W22</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">30<span class="cal-wk">｜W22</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">31<span class="cal-wk">｜W23</span></div></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-  </div>
-</div></div></section>
-<!-- 13 ▪ 九月行事曆 -->
+<!-- 10 ▪ 九月行事曆 -->
 <section class="slide" data-title="九月行事曆" data-tag="課程架構" data-icon="📆">
 <div class="card th-white">
 <div class="si" style="padding:8px 22px calc(var(--ctrl-h) + 4px)">
@@ -687,27 +521,195 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">五</div>
     <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">六</div>
     <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">日</div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell"><div class="cal-date">1<span class="cal-wk">｜W23</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">2<span class="cal-wk">｜W23</span></div></div>
-    <div class="cal-cell"><div class="cal-date">3<span class="cal-wk">｜W23</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">4<span class="cal-wk">｜W23</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">5<span class="cal-wk">｜W23</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">6<span class="cal-wk">｜W23</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">7<span class="cal-wk">｜W24</span></div></div>
-    <div class="cal-cell"><div class="cal-date">8<span class="cal-wk">｜W24</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
-    <div class="cal-cell"><div class="cal-date">9<span class="cal-wk">｜W24</span></div></div>
-    <div class="cal-cell"><div class="cal-date">10<span class="cal-wk">｜W24</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">11<span class="cal-wk">｜W24</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">12<span class="cal-wk">｜W24</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班</div></div>
-    <div class="cal-cell"><div class="cal-date">13<span class="cal-wk">｜W24</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
-    <div class="cal-cell"><div class="cal-date">14</div></div>
-    <div class="cal-cell"><div class="cal-date">15</div></div>
-    <div class="cal-cell"><div class="cal-date">16</div></div>
-    <div class="cal-cell"><div class="cal-date">17</div></div>
-    <div class="cal-cell"><div class="cal-date">18</div></div>
-    <div class="cal-cell"><div class="cal-date">19</div></div>
-    <div class="cal-cell"><div class="cal-date">20</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">31</div></div>
+    <div class="cal-cell"><div class="cal-date">1</div></div>
+    <div class="cal-cell"><div class="cal-date">2</div></div>
+    <div class="cal-cell"><div class="cal-date">3</div></div>
+    <div class="cal-cell"><div class="cal-date">4</div></div>
+    <div class="cal-cell"><div class="cal-date">5</div></div>
+    <div class="cal-cell"><div class="cal-date">6</div></div>
+    <div class="cal-cell"><div class="cal-date">7</div></div>
+    <div class="cal-cell"><div class="cal-date">8</div></div>
+    <div class="cal-cell"><div class="cal-date">9</div></div>
+    <div class="cal-cell"><div class="cal-date">10</div></div>
+    <div class="cal-cell"><div class="cal-date">11</div></div>
+    <div class="cal-cell"><div class="cal-date">12</div></div>
+    <div class="cal-cell"><div class="cal-date">13</div></div>
+    <div class="cal-cell" style="background:var(--a50);border-left:3px solid var(--a500);padding-left:4px"><div class="cal-date" style="color:var(--a500)">14<span class="cal-wk">｜W13</span></div><div class="cal-evt" style="color:var(--a500);font-weight:700">🎉 學期開始</div></div>
+    <div class="cal-cell"><div class="cal-date">15<span class="cal-wk">｜W13</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">16<span class="cal-wk">｜W13</span></div></div>
+    <div class="cal-cell"><div class="cal-date">17<span class="cal-wk">｜W13</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">18<span class="cal-wk">｜W13</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">19<span class="cal-wk">｜W13</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">20<span class="cal-wk">｜W13</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">21</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">22</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">23</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">24</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">25</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">26</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">27</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell"><div class="cal-date">28<span class="cal-wk">｜W14</span></div></div>
+    <div class="cal-cell"><div class="cal-date">29<span class="cal-wk">｜W14</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">30<span class="cal-wk">｜W14</span></div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">1<span class="cal-wk">｜W14</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">2<span class="cal-wk">｜W14</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">3<span class="cal-wk">｜W14</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">4<span class="cal-wk">｜W14</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+  </div>
+</div></div></section>
+
+
+<!-- 11 ▪ 十月行事曆 -->
+<section class="slide" data-title="十月行事曆" data-tag="課程架構" data-icon="📆">
+<div class="card th-white">
+<div class="si" style="padding:8px 22px calc(var(--ctrl-h) + 4px)">
+  <div style="flex-shrink:0;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+    <div style="font-size:clamp(20px,3vw,32px);font-weight:800;color:var(--n800)">十月</div>
+    <div style="font-size:clamp(18px,2.6vw,28px);font-weight:800;color:var(--p500)">2026</div>
+  </div>
+  <div style="flex:1;min-height:0;overflow:hidden;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:auto repeat(5,1fr);gap:1px;background:var(--border);padding:1px;border-radius:4px">
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">一</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">二</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">三</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">四</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">五</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">六</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">日</div>
+    <div class="cal-cell cal-out"><div class="cal-date">28<span class="cal-wk">｜W14</span></div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">29<span class="cal-wk">｜W14</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">30<span class="cal-wk">｜W14</span></div></div>
+    <div class="cal-cell"><div class="cal-date">1<span class="cal-wk">｜W14</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">2<span class="cal-wk">｜W14</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">3<span class="cal-wk">｜W14</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">4<span class="cal-wk">｜W14</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">5</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">6</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">7</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">8</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">9</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">10</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell" style="background:#FDF4FF"><div class="cal-date">11</div><div class="cal-evt" style="color:#DC2626;font-weight:700">休校停課</div></div>
+    <div class="cal-cell"><div class="cal-date">12<span class="cal-wk">｜W15</span></div></div>
+    <div class="cal-cell"><div class="cal-date">13<span class="cal-wk">｜W15</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">14<span class="cal-wk">｜W15</span></div></div>
+    <div class="cal-cell"><div class="cal-date">15<span class="cal-wk">｜W15</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">16<span class="cal-wk">｜W15</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">17<span class="cal-wk">｜W15</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">18<span class="cal-wk">｜W15</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">19<span class="cal-wk">｜W16</span></div></div>
+    <div class="cal-cell"><div class="cal-date">20<span class="cal-wk">｜W16</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">21<span class="cal-wk">｜W16</span></div></div>
+    <div class="cal-cell"><div class="cal-date">22<span class="cal-wk">｜W16</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">23<span class="cal-wk">｜W16</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">24<span class="cal-wk">｜W16</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">25<span class="cal-wk">｜W16</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">26<span class="cal-wk">｜W17</span></div></div>
+    <div class="cal-cell"><div class="cal-date">27<span class="cal-wk">｜W17</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">28<span class="cal-wk">｜W17</span></div></div>
+    <div class="cal-cell"><div class="cal-date">29<span class="cal-wk">｜W17</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">30<span class="cal-wk">｜W17</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">31<span class="cal-wk">｜W17</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">1<span class="cal-wk">｜W17</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+  </div>
+</div></div></section>
+<!-- 12 ▪ 十一月行事曆 -->
+<section class="slide" data-title="十一月行事曆" data-tag="課程架構" data-icon="📆">
+<div class="card th-white">
+<div class="si" style="padding:8px 22px calc(var(--ctrl-h) + 4px)">
+  <div style="flex-shrink:0;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+    <div style="font-size:clamp(20px,3vw,32px);font-weight:800;color:var(--n800)">十一月</div>
+    <div style="font-size:clamp(18px,2.6vw,28px);font-weight:800;color:var(--p500)">2026</div>
+  </div>
+  <div style="flex:1;min-height:0;overflow:hidden;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:auto repeat(6,1fr);gap:1px;background:var(--border);padding:1px;border-radius:4px">
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">一</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">二</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">三</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">四</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">五</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">六</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">日</div>
+    <div class="cal-cell cal-out"><div class="cal-date">26<span class="cal-wk">｜W17</span></div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">27<span class="cal-wk">｜W17</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">28<span class="cal-wk">｜W17</span></div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">29<span class="cal-wk">｜W17</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">30<span class="cal-wk">｜W17</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">31<span class="cal-wk">｜W17</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">1<span class="cal-wk">｜W17</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">2<span class="cal-wk">｜W18</span></div></div>
+    <div class="cal-cell"><div class="cal-date">3<span class="cal-wk">｜W18</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">4<span class="cal-wk">｜W18</span></div></div>
+    <div class="cal-cell"><div class="cal-date">5<span class="cal-wk">｜W18</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">6<span class="cal-wk">｜W18</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">7<span class="cal-wk">｜W18</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">8<span class="cal-wk">｜W18</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">9<span class="cal-wk">｜W19</span></div></div>
+    <div class="cal-cell"><div class="cal-date">10<span class="cal-wk">｜W19</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">11<span class="cal-wk">｜W19</span></div></div>
+    <div class="cal-cell"><div class="cal-date">12<span class="cal-wk">｜W19</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">13<span class="cal-wk">｜W19</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">14<span class="cal-wk">｜W19</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">15<span class="cal-wk">｜W19</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">16<span class="cal-wk">｜W20</span></div></div>
+    <div class="cal-cell"><div class="cal-date">17<span class="cal-wk">｜W20</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">18<span class="cal-wk">｜W20</span></div></div>
+    <div class="cal-cell"><div class="cal-date">19<span class="cal-wk">｜W20</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">20<span class="cal-wk">｜W20</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">21<span class="cal-wk">｜W20</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">22<span class="cal-wk">｜W20</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">23<span class="cal-wk">｜W21</span></div></div>
+    <div class="cal-cell"><div class="cal-date">24<span class="cal-wk">｜W21</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">25<span class="cal-wk">｜W21</span></div></div>
+    <div class="cal-cell"><div class="cal-date">26<span class="cal-wk">｜W21</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">27<span class="cal-wk">｜W21</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">28<span class="cal-wk">｜W21</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">29<span class="cal-wk">｜W21</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">30<span class="cal-wk">｜W22</span></div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">1<span class="cal-wk">｜W22</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">2<span class="cal-wk">｜W22</span></div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">3<span class="cal-wk">｜W22</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">4<span class="cal-wk">｜W22</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">5<span class="cal-wk">｜W22</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">6<span class="cal-wk">｜W22</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+  </div>
+</div></div></section>
+<!-- 13 ▪ 十二月行事曆 -->
+<section class="slide" data-title="十二月行事曆" data-tag="課程架構" data-icon="📆">
+<div class="card th-white">
+<div class="si" style="padding:8px 22px calc(var(--ctrl-h) + 4px)">
+  <div style="flex-shrink:0;display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+    <div style="font-size:clamp(20px,3vw,32px);font-weight:800;color:var(--n800)">十二月</div>
+    <div style="font-size:clamp(18px,2.6vw,28px);font-weight:800;color:var(--p500)">2026</div>
+  </div>
+  <div style="flex:1;min-height:0;overflow:hidden;display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:auto repeat(5,1fr);gap:1px;background:var(--border);padding:1px;border-radius:4px">
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">一</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">二</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">三</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">四</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">五</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">六</div>
+    <div style="background:var(--p500);color:#fff;padding:5px 6px;font-size:13px;font-weight:700;display:flex;align-items:center">日</div>
+    <div class="cal-cell cal-out"><div class="cal-date">30<span class="cal-wk">｜W22</span></div></div>
+    <div class="cal-cell"><div class="cal-date">1<span class="cal-wk">｜W22</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">2<span class="cal-wk">｜W22</span></div></div>
+    <div class="cal-cell"><div class="cal-date">3<span class="cal-wk">｜W22</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">4<span class="cal-wk">｜W22</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">5<span class="cal-wk">｜W22</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">6<span class="cal-wk">｜W22</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">7<span class="cal-wk">｜W23</span></div></div>
+    <div class="cal-cell"><div class="cal-date">8<span class="cal-wk">｜W23</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">9<span class="cal-wk">｜W23</span></div></div>
+    <div class="cal-cell"><div class="cal-date">10<span class="cal-wk">｜W23</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">11<span class="cal-wk">｜W23</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">12<span class="cal-wk">｜W23</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">13<span class="cal-wk">｜W23</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">14<span class="cal-wk">｜W24</span></div></div>
+    <div class="cal-cell"><div class="cal-date">15<span class="cal-wk">｜W24</span></div><div class="cal-evt cal-evt-hi">20:00–21:30 文法課</div></div>
+    <div class="cal-cell"><div class="cal-date">16<span class="cal-wk">｜W24</span></div></div>
+    <div class="cal-cell"><div class="cal-date">17<span class="cal-wk">｜W24</span></div><div class="cal-evt">19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">18<span class="cal-wk">｜W24</span></div><div class="cal-evt">09:00–11:00 午前班<br>12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">19<span class="cal-wk">｜W24</span></div><div class="cal-evt">12:00–14:00 正午班<br>19:00–21:00 晚間班</div></div>
+    <div class="cal-cell"><div class="cal-date">20<span class="cal-wk">｜W24</span></div><div class="cal-evt">09:00–11:00 午前班<br>15:00–17:00 午後班<br>19:00–21:00 晚間班</div></div>
     <div class="cal-cell"><div class="cal-date">21</div></div>
     <div class="cal-cell"><div class="cal-date">22</div></div>
     <div class="cal-cell"><div class="cal-date">23</div></div>
@@ -718,10 +720,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     <div class="cal-cell"><div class="cal-date">28</div></div>
     <div class="cal-cell"><div class="cal-date">29</div></div>
     <div class="cal-cell"><div class="cal-date">30</div></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
-    <div class="cal-cell" style="background:var(--n100)"></div>
+    <div class="cal-cell"><div class="cal-date">31</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">1</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">2</div></div>
+    <div class="cal-cell cal-out"><div class="cal-date">3</div></div>
   </div>
 </div></div></section>
 
@@ -749,12 +751,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
     <div class="ic">
       <div class="ic-icon">🔗</div>
       <div class="ic-title">課程連結 & 密碼</div>
-      <div class="ic-body">正式 12 週 Zoom 連結<br><a href="https://zoom.us/j/93837429415?pwd=9ELnyYnCW8mLpaMp92FyT6E0xEWbew.1" target="_blank" style="color:var(--p600);font-weight:700;text-decoration:underline;text-underline-offset:3px">→ 點此進入 Zoom 教室</a><br>會議 ID：<strong>93837429415</strong>　密碼：<strong style="color:var(--p600)">657490</strong><br>上課前 5 分鐘再進教室即可</div>
+      <div class="ic-body">正式 12 週 Zoom 連結<br><a href="https://zoom.us/j/96190984856?pwd=7PQYgZXvCHb60moyxq5HuzcCUybSQC.1" target="_blank" style="color:var(--p600);font-weight:700;text-decoration:underline;text-underline-offset:3px">→ 點此進入 Zoom 教室</a><br>會議 ID：<strong>961 9098 4856</strong>　密碼：<strong style="color:var(--p600)">837708</strong><br>上課前 5 分鐘再進教室即可</div>
     </div>
     <div class="ic">
       <div class="ic-icon">🗓️</div>
       <div class="ic-title">課程進度表</div>
-      <div class="ic-body">可在「<a href="https://drive.google.com/file/d/1Kmsy8cz1Naxm4ZKGXiiCOLLfg71OOjwx/view?usp=sharing" target="_blank" style="color:var(--p600);font-weight:700;text-decoration:underline;text-underline-offset:3px">S7 起跑班課程進度表</a>」確認各週文法章節對應口說課內容</div>
+      <div class="ic-body">可在「<a href="https://drive.google.com/file/d/1Kmsy8cz1Naxm4ZKGXiiCOLLfg71OOjwx/view?usp=sharing" target="_blank" style="color:var(--p600);font-weight:700;text-decoration:underline;text-underline-offset:3px">S8 起跑班課程進度表</a>」確認各週文法章節對應口說課內容</div>
     </div>
     <div class="ic">
       <div class="ic-icon">🎥</div>
@@ -870,7 +872,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
         <div class="nrow"><div class="nnum">3</div><div><div class="ntitle">「已選課程」中只留下你的班別</div><div class="ndesc">取消其他不相關的課程，方便篩選</div></div></div>
         <div class="nrow"><div class="nnum">4</div><div><div class="ntitle">下方週曆點時段 → 確認資訊 → 點「<span class="hlt">預約</span>」</div><div class="ndesc">出現「預約成功」即完成，每週都需個別登記</div></div></div>
       </div>
-      <div class="note" style="margin-top:10px;font-size:15px;line-height:1.7">為了掌握上課出席狀況和提供課程會議連結，請同學務必在口說課開始前完成課程登記，表示當週會來上課。可以<strong>一次登記完 12 週的課程</strong>會比較方便！有任何操作上的問題歡迎私訊 LINE 客服。<br>⚠️ 上課登記預定於 <strong>2026/6/8 開課直播後</strong>開放</div>
+      <div class="note" style="margin-top:10px;font-size:15px;line-height:1.7">為了掌握上課出席狀況和提供課程會議連結，請同學務必在口說課開始前完成課程登記，表示當週會來上課。可以<strong>一次登記完 12 週的課程</strong>會比較方便！有任何操作上的問題歡迎私訊 LINE 客服。<br>⚠️ 上課登記預定於 <strong>9/7（一）後</strong>開放</div>
     </div>
     <div class="col" style="display:flex;flex-direction:column">
       <h3>操作畫面示範</h3>
@@ -1013,11 +1015,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
 <div class="si">
   <div class="lbl">重要規定</div>
   <div class="h2">💰 退費標準說明</div>
-  <div style="margin-top:6px;font-size:16px;color:var(--text-muted)">第一週：6/23 文法課 · 6/25–28 口說課｜以 12 週課程方案計算</div>
+  <div style="margin-top:6px;font-size:16px;color:var(--text-muted)">第一週：9/15 文法課 · 9/17–20 口說課｜以 12 週課程方案計算</div>
   <div class="refund-row">
     <div class="rb rb-g">
       <div class="rb-tag">2/3 退費</div>
-      <div class="rb-period">開課前申請（6/22 前）</div>
+      <div class="rb-period">開課前申請（9/14 前）</div>
       <div class="rb-amount">2/3</div>
       <div class="rb-note">開課前申請退課<br>可退 2/3 課程費用</div>
     </div>
@@ -1031,7 +1033,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Pin
       <div class="rb-tag">不受理</div>
       <div class="rb-period">超過課程 1/2 後</div>
       <div class="rb-amount">0%</div>
-      <div class="rb-note">恕不接受退費申請<br>（7/27 W18 後即不受理）</div>
+      <div class="rb-note">恕不接受退費申請<br>（11/2 W18 後即不受理）</div>
     </div>
   </div>
   <div class="note">📌 海外學員如需匯款退款，將扣除匯款手續費後再行退回，敬請見諒。</div>
