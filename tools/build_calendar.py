@@ -51,7 +51,8 @@ PM = ('15:00–17:00', '午後班')
 EVE = ('19:00–21:00', '晚間班')
 MON, TUE, WED, THU, FRI, SAT, SUN = range(7)
 
-GRAMMAR_TXT = '20:00–21:30 文法課'
+GRAMMAR_TIME = '20:00–21:30'
+GRAMMAR_TXT = f'{GRAMMAR_TIME} 文法課'
 
 CLASSES = {
     # 起步班 S9 — W1–W12，文法課週一，開學前有開課說明直播
@@ -256,6 +257,21 @@ def verify(name):
     want_decl = {wd: [n for _, n in s] for wd, s in cfg['speak'].items()}
     if decl != want_decl:
         errs.append(f'時段表與設定不符: {decl} ≠ {want_decl}')
+
+    # 行事曆以外的敘述文字也會寫死星期（「每週X 20:00–21:30」「週四/五/六/日各時段」）。
+    # 這些不是本腳本產生的，但改了設定卻忘了同步會直接誤導學生，所以一併檢查。
+    prose = re.sub(r'<section class="slide"[^>]*data-title="[^"]*行事曆".*?</section>',
+                   '', html, flags=re.S)
+    for m in re.finditer(r'每週([一二三四五六日])\s*' + re.escape(GRAMMAR_TIME), prose):
+        if WD_CN.index(m.group(1)) != cfg['grammar']:
+            errs.append(f'內文寫「每週{m.group(1)} {GRAMMAR_TIME}」，'
+                        f'但文法課設定在週{WD_CN[cfg["grammar"]]}')
+    for m in re.finditer(r'週([一二三四五六日](?:/[一二三四五六日])*)各時段', prose):
+        got = sorted(WD_CN.index(c) for c in m.group(1) if c in WD_CN)
+        want = sorted(cfg['speak'])
+        if got != want:
+            errs.append('內文口說課星期「週{}各時段」與設定 {} 不符'.format(
+                m.group(1), '/'.join(WD_CN[d] for d in want)))
 
     blocks = re.findall(r'data-title="([^"]*)月行事曆"(.*?)</section>', html, re.S)
     for (label, body), (y, m) in zip(blocks, MONTHS):
