@@ -81,3 +81,72 @@ BREAKS = [                        # 停課區間（含頭含尾）
 **跑出 ❌**
 訊息會指出是哪一天、哪裡對不上（例如「2026-10-03（週六）口說 [...] ≠ [...]」）。
 此時檔案已經寫入，修正設定後重跑就會覆蓋回正確內容。
+
+---
+
+## build_for_teachify.py — 產生開課快手部署版
+
+手冊在 repo 裡用相對路徑引用圖片（`assets/xxx.png`），本機預覽與 Cloudflare
+Pages 靠這個。但**開課快手上沒有 assets 目錄**，直接把 repo 的檔案丟上去，
+12 個圖片影片會全破。
+
+這支腳本把 `assets/...` 換成 GitHub Pages 絕對網址，輸出到 `dist/teachify/`，
+repo 本身不會被改到。
+
+```
+python3 tools/build_for_teachify.py --check
+```
+
+`--check` 會實際連線確認每個圖片影片都取得得到，**換過圖之後一定要加這個參數跑**。
+
+### ⚠️ 圖片來源的依賴
+
+圖片是 hot-link **`main` 分支**的 GitHub Pages，因為 Teachify MCP 目前缺
+`storage:write` scope，圖片傳不進 Teachify 自己的 CDN。
+
+換圖時**必須先讓新圖進 `main`**，只放在功能分支上，線上手冊會抓不到。
+
+## 部署到開課快手
+
+三個頁面已經建好，日後更新只要重新部署，不用再 create_page。
+
+| 班別 | slug | 正式網址 | page_id |
+|---|---|---|---|
+| 起步班 | `walking-s9` | https://nii.school/walking-s9/ | `3715f11b-763b-4997-a92e-945f7be5377d` |
+| 起跑班 | `running-s8` | https://nii.school/running-s8/ | `4e8f346a-96a3-49f3-ba6e-fc8a33ebb5c2` |
+| 起飛班 | `flying-s7` | https://nii.school/flying-s7/ | `ab131e0f-9730-4458-b485-ee40aa6dce76` |
+
+### 步驟（透過 Teachify MCP）
+
+HTML 約 95KB，超過單次工具呼叫的 40KB 上限，所以要走多階段上傳：
+
+1. `prepare_deployment(page_id, [{path:"index.html", size}], is_preview:true, routing_mode:"static")`
+   → 拿到 `deployment_id`（30 分鐘內要完成）
+2. `request_asset_upload(deployment_id, "index.html")` → 拿到 PUT 網址與 headers
+3. 用 curl 直傳位元組，不要塞進工具參數：
+   ```
+   curl -X PUT "<upload_url>" -H "Authorization: Bearer <token>" \
+        -H "Content-Type: text/html" --data-binary @dist/teachify/walking.html
+   ```
+4. `complete_deployment(deployment_id)` → 拿到 `preview_url_loopwise_origin`
+5. **先開 preview 網址確認內容與圖片都正常**
+6. `promote_deployment(deployment_id)` → 切成正式版
+7. 等 Cloudflare KV 傳播（實測約 75 秒，偶爾要好幾分鐘），再驗證正式網址
+
+出問題用 `rollback_page(page_id, to_deployment_id)` 退回上一版。
+
+### ⚠️ 網址要帶尾斜線
+
+`https://nii.school/walking-s9/` 才會回 200，**不帶尾斜線會 404**。這是這套
+路由的既有行為。發連結給學生時記得帶上。
+
+### 驗證方式
+
+確認線上內容真的是你送出去的那份：
+
+```
+shasum -a 256 < dist/teachify/walking.html
+curl -s https://nii.school/walking-s9/ | shasum -a 256
+```
+
+兩個 hash 相同就對了。
