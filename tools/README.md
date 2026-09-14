@@ -142,11 +142,13 @@ HTML 約 95KB，超過單次工具呼叫的 40KB 上限，所以要走多階段�
 
 ### 驗證方式
 
-確認線上內容真的是你送出去的那份：
+確認線上內容真的是你送出去的那份。**不要比 hash**：開課快手送出 HTML 時會自動塞入
+`<link rel="canonical">` 與一段 WebMCP `<script>`（2026-09 起），所以線上檔永遠比
+本機大約 10KB，shasum 一定對不上。改用 diff 比對，只允許那兩處差異：
 
 ```
-shasum -a 256 < dist/teachify/walking.html
-curl -s https://nii.school/walking-s9/ | shasum -a 256
+curl -s https://nii.school/walking-s9/ | diff - dist/teachify/walking.html
 ```
 
-兩個 hash 相同就對了。
+只看到 `<head>` 那行多了 canonical、以及 `</html>` 後面多出一段 `<form>` + `<script data-webmcp>`
+就對了。出現其他差異代表線上還是舊版（KV 尚未傳播）或送錯檔。
