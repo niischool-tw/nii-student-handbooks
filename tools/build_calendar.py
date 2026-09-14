@@ -61,9 +61,9 @@ CLASSES = {
         pre={dt.date(2026, 8, 31): (True, '📢 公告口說時段'),
              dt.date(2026, 9, 7): (True, '⭐ 20:00 開課說明直播')},
         speak={THU: [EVE],
-               FRI: [AM, NOON, PM, EVE],
-               SAT: [AM, NOON, EVE],
-               SUN: [AM, NOON, PM, EVE]},
+               FRI: [NOON, PM, EVE],
+               SAT: [AM, EVE],
+               SUN: [AM, EVE]},
     ),
     # 起跑班 S8 — W13–W24，文法課週二
     'running': dict(
