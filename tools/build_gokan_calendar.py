@@ -6,7 +6,7 @@
 規則（2027 版，Eli 2026-11-17 決定改成每月 15 號選課）
 ------------------------------------------------------
 - 每個月 15 號 20:00 開放「下一個月」整個月的選課。
-  例：1/15 開放 2 月的課；2026/12/15 開放 2027 年 1 月的課。
+  例：1/15 開放 2 月的課。2027 年 1 月例外：沿用舊制，2026/12/21 開放。
 - 休假整段不上課，月曆上標紅字。
 - 每週五 10:00 公開下一週的預告與預習影片（休假日不標）。
 
@@ -35,6 +35,8 @@ HTML = ROOT / 'gokan' / 'index.html'
 YEAR = 2027
 SELECT_DAY = 15          # 每月幾號開放選課
 SELECT_TIME = '20:00'    # 開放時間
+# 開放 1 月選課的日子：2027 是交接年，沿用舊制的 2026/12/21（Eli 2026-11-17）
+JAN_SELECT = dt.date(2026, 12, 21)
 # 休假（含頭含尾）。名稱會直接顯示在月曆上
 # 來源：Drive「課程_日文讀書會_工作時程」→「課程時程表」分頁，標紅色的停課日
 #（Eli 2026-11-17 指定）。端午、中秋、國慶等單日國定假日照常上課。
@@ -64,7 +66,7 @@ def next_month(d):
 
 def select_days():
     """回傳選課日清單：前一年 12 月那次（開放 1 月）＋今年 1～12 月。"""
-    days = [dt.date(YEAR - 1, 12, SELECT_DAY)]
+    days = [JAN_SELECT]
     days += [dt.date(YEAR, m, SELECT_DAY) for m in range(1, 13)]
     return days
 
@@ -163,7 +165,7 @@ def verify(src, sel):
     errs = []
     if len(sel) != 13:
         errs.append(f'選課日應有 13 個（前一年 12 月＋今年 12 個月），實際 {len(sel)}')
-    for d in sel:
+    for d in sel[1:]:
         if d.day != SELECT_DAY:
             errs.append(f'選課日 {d} 不是 {SELECT_DAY} 號')
     if src.count('行事曆" data-tag="課程架構"') != 12:
