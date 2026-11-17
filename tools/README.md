@@ -84,6 +84,21 @@ BREAKS = [                        # 停課區間（含頭含尾）
 
 ---
 
+## build_gokan_calendar.py — 重排語感練功坊（gokan/）的行事曆
+
+語感沒有固定班別，是「四週一輪」的預約循環，所以另外一支。會重寫
+`gokan/index.html` 的十二個月曆頁與「行事曆重點」頁（選課開放日、休假週）。
+
+```
+python3 tools/build_gokan_calendar.py
+```
+
+新年度只改檔案最上面的「年度設定」：`YEAR`、第一個 W1 的週二 `FIRST_W1`、
+休假 `HOLIDAYS`、春節這種兩個半週合成一週的 `MERGED`。
+規則：一週＝週二到週日；休假週不給 W 號；每輪 W4 那週的週一 20:00 開放下一輪選課。
+
+---
+
 ## build_for_teachify.py — 產生開課快手部署版
 
 手冊在 repo 裡用相對路徑引用圖片（`assets/xxx.png`），本機預覽與 Cloudflare
