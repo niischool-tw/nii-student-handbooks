@@ -50,6 +50,8 @@ TARGETS = {
                 '4e8f346a-96a3-49f3-ba6e-fc8a33ebb5c2'),
     'flying': ('flying-s7', 'https://nii.school/flying-s7/',
                'ab131e0f-9730-4458-b485-ee40aa6dce76'),
+    'gokan': ('liangong-2027', 'https://nii.school/liangong-2027/',
+              '4fe81c09-1686-4285-9734-b6ca60893dc5'),
 }
 
 ASSET_REF = re.compile(r'(src|href)="assets/')
