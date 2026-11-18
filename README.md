@@ -9,7 +9,7 @@
 | 起步班（S9） | [https://niischool-tw.github.io/nii-student-handbooks/walking/](https://niischool-tw.github.io/nii-student-handbooks/walking/) | 🧪 測試中 |
 | 起跑班（S8） | [https://niischool-tw.github.io/nii-student-handbooks/running/](https://niischool-tw.github.io/nii-student-handbooks/running/) | 🧪 測試中 |
 | 起飛班（S7） | [https://niischool-tw.github.io/nii-student-handbooks/flying/](https://niischool-tw.github.io/nii-student-handbooks/flying/) | 🧪 測試中 |
-| 語感練功坊 | — | 🚧 規劃中 |
+| 語感練功坊（2027） | 尚未上線（本機 `gokan/`） | 🚧 草稿，待確認 |
 
 ## 給予回饋
 
