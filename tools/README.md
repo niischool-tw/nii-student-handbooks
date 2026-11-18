@@ -122,13 +122,14 @@ python3 tools/build_for_teachify.py --check
 
 ## 部署到開課快手
 
-三個頁面已經建好，日後更新只要重新部署，不用再 create_page。
+頁面都已經建好，日後更新只要重新部署，不用再 create_page。
 
 | 班別 | slug | 正式網址 | page_id |
 |---|---|---|---|
 | 起步班 | `walking-s9` | https://nii.school/walking-s9/ | `3715f11b-763b-4997-a92e-945f7be5377d` |
 | 起跑班 | `running-s8` | https://nii.school/running-s8/ | `4e8f346a-96a3-49f3-ba6e-fc8a33ebb5c2` |
 | 起飛班 | `flying-s7` | https://nii.school/flying-s7/ | `ab131e0f-9730-4458-b485-ee40aa6dce76` |
+| 語感練功坊（`gokan/`） | `liangong-2027` | https://nii.school/liangong-2027/ | `4fe81c09-1686-4285-9734-b6ca60893dc5` |
 
 ### 步驟（透過 Teachify MCP）
 
